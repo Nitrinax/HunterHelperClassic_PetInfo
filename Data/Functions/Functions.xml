@@ -1,0 +1,33 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+
+  <!-- main functions -->
+  <Script file="addElements.lua"/>
+  <Script file="createModuleFrame.lua"/>
+  <Script file="registerEvents.lua"/>
+  <Script file="handleEvents.lua"/>
+
+  <!-- setup functions -->
+  <Script file="setupPetExperiencepoints.lua"/>
+  <Script file="setupPetHappiness.lua"/>
+  <Script file="setupPetLevel.lua"/>
+  <Script file="setupPetLoyalty.lua"/>
+  <Script file="setupPetName.lua"/>
+  <Script file="setupPetTrainingpoints.lua"/>  
+
+  <!-- update functions -->
+  <Script file="updatePetExperiencepoints.lua"/>
+  <Script file="updatePetHappiness.lua"/>
+  <Script file="updatePetLevel.lua"/>
+  <Script file="updatePetLoyalty.lua"/>
+  <Script file="updatePetName.lua"/>
+  <Script file="updatePetTrainingpoints.lua"/>
+
+  <!-- misc functions -->
+  <Script file="getPetHappinessName.lua"/>
+  <Script file="getPetLoyaltyNumber.lua"/>
+
+  <!-- element functions -->
+  <Include file="Elements\Elements.xml"/>
+
+</Ui>

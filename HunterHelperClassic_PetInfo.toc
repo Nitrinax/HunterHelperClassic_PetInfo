@@ -1,0 +1,22 @@
+## Interface: 11302
+## Title: HunterHelperClassic_PetInfo
+## X-Short-Title: HHCPET
+## Notes: Pet module for HunterHelperClassic
+## Author: Nitrinax
+## Version: 0.0.1
+## X-Revision: 1
+## X-Date: 2019-10-06
+## Dependencies: HunterHelperClassic
+## LoadOnDemand: 1
+
+# includes
+Includes\Includes.xml
+
+# data
+Data\Data.xml
+
+# options
+HunterHelperClassic_PetInfo_Options.lua
+
+# core
+HunterHelperClassic_PetInfo.lua
