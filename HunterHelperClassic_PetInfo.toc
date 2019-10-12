@@ -4,7 +4,7 @@
 ## Notes: Pet module for HunterHelperClassic
 ## Author: Nitrinax
 ## Version: 0.0.1
-## X-Revision: 1
+## X-Revision: 9
 ## X-Date: 2019-10-06
 ## Dependencies: HunterHelperClassic
 ## LoadOnDemand: 1
