@@ -13,7 +13,7 @@ function _HHC.Modules.PetInfo.Functions:handleEvents(frame)
         --elseif event == "PLAYER_XP_UPDATE" then
 
             --ntrnx_debug(_LibCF:colored_print("orange", event, true));
-        
+
         -- check event PET_BAR_UPDATE
         elseif event == "PET_BAR_UPDATE" then
 
@@ -21,20 +21,24 @@ function _HHC.Modules.PetInfo.Functions:handleEvents(frame)
 
             if _HHC.Modules.PetInfo.Element.List["NAME"] == true then
                 _HHC.Modules.PetInfo.Functions:setupPetName();
-            end            
-            if _HHC.Modules.PetInfo.Element.List["LEVEL"] == true then
-                _HHC.Modules.PetInfo.Functions:updatePetLevel();
+            end
+
+            if _HHC.Modules.PetInfo.Element.List["LEVEL"] == true then                
                 _HHC.Modules.PetInfo.Functions:setupPetLevel();
             end
+
             if _HHC.Modules.PetInfo.Element.List["EXPERIENCEPOINTS"] == true then
                 _HHC.Modules.PetInfo.Functions:setupPetExperiencepoints();
             end
+
             if _HHC.Modules.PetInfo.Element.List["HAPPINESS"] == true then
                 _HHC.Modules.PetInfo.Functions:setupPetHappiness();
             end
+
             if _HHC.Modules.PetInfo.Element.List["LOYALTY"] == true then
                 _HHC.Modules.PetInfo.Functions:setupPetLoyalty();
             end
+
             if _HHC.Modules.PetInfo.Element.List["TRAININGPOINTS"] == true then
                 _HHC.Modules.PetInfo.Functions:setupPetTrainingpoints();
             end

@@ -13,17 +13,19 @@ function _HHC.Modules.PetInfo.Functions:setupPetLoyalty()
     -- Best Friend (Rank 6)
     --     Ahhh, isn't he cute? Your pet was now a furry rug at your feet when you settle down in front of the fireplace with a glass of wine and a good book. At this loyalty level your pet required the least food to remain happy. 
 
-    --reset pet happiness value
+    --reset pet loyalty value
     _HHC.Modules.PetInfo.Element.Frames.Loyalty:SetValue(0);
 
-    --reset pet happiness text
+    --reset pet loyalty text
     _LibWidgets:setText(_HHC.Modules.PetInfo.Element.Frames.Loyalty.text, "");
 
     if _HHC.Functions:checkIfPetSummoned() == true then
 
+        _HHC.Modules.PetInfo.Element.Frames.Loyalty:Show();
+
         _HHC.Modules.PetInfo.Functions:updatePetLoyalty();
 
-        --pet text
+        --pet loyalty
         _LibWidgets:setText(_HHC.Modules.PetInfo.Element.Frames.Loyalty.text,
             _HHC.Data.CurrentPetLoyalty);
 
@@ -31,6 +33,19 @@ function _HHC.Modules.PetInfo.Functions:setupPetLoyalty()
 
         _HHC.Modules.PetInfo.Element.Frames.Loyalty:SetMinMaxValues(0, 6);
         _HHC.Modules.PetInfo.Element.Frames.Loyalty:SetValue(petLoyaltyNumber);
+
+    else
+
+        if _HHC.Modules.PetInfo.HideBarsWhenNoPetSummoned == false then
+
+            --pet loyalty
+            _LibWidgets:setText(_HHC.Modules.PetInfo.Element.Frames.Loyalty.text, "");
+
+        else
+
+            _HHC.Modules.PetInfo.Element.Frames.Loyalty:Hide();
+
+        end
 
     end
 

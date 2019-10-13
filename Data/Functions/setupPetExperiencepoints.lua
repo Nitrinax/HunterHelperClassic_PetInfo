@@ -8,6 +8,8 @@ function _HHC.Modules.PetInfo.Functions:setupPetExperiencepoints()
 
     if _HHC.Functions:checkIfPetSummoned() == true then
 
+        _HHC.Modules.PetInfo.Element.Frames.Experiencepoints:Show();
+
         if _HHC.Functions:checkPetSameLevelAsPlayer() == false then
 
             _HHC.Modules.PetInfo.Functions:updatePetExperiencepoints();
@@ -36,11 +38,20 @@ function _HHC.Modules.PetInfo.Functions:setupPetExperiencepoints()
 
     else
 
-        _LibWidgets:setText(_HHC.Modules.PetInfo.Element.Frames.Experiencepoints.text,
-            _LibLocale:GetCatalogStr(_HHC.Modules.PetInfo.Locale.Experiencepoints,
-            "NO_PET_SOMMONED",
-            "no pet summoned")
-        );
+        if _HHC.Modules.PetInfo.HideBarsWhenNoPetSummoned == false then
+
+            --pet experience points message
+            _LibWidgets:setText(_HHC.Modules.PetInfo.Element.Frames.Experiencepoints.text,
+                _LibLocale:GetCatalogStr(_HHC.Modules.PetInfo.Locale.Experiencepoints,
+                "NO_PET_SOMMONED",
+                "no pet summoned")
+            );
+
+        else
+
+            _HHC.Modules.PetInfo.Element.Frames.Experiencepoints:Hide();
+
+        end
 
     end
 

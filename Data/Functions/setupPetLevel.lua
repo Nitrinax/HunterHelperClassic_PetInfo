@@ -4,12 +4,12 @@ function _HHC.Modules.PetInfo.Functions:setupPetLevel()
 
         _HHC.Modules.PetInfo.Functions:updatePetLevel();
 
-        --pet text
+        --pet level
         _LibWidgets:setText(_HHC.Modules.PetInfo.Element.Frames.Level.text, "Level " .. _HHC.Data.CurrentPetLevel);
 
     else
 
-        --pet text
+        --pet level
         _LibWidgets:setText(_HHC.Modules.PetInfo.Element.Frames.Level.text, "");
 
     end

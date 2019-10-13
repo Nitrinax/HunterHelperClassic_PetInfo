@@ -1,2 +1,10 @@
+0.0.1-10
+- fixed TOP_OFFSET" pet Level
+- fixed pet happiness text if no pet spawned
+- fixed pet loyalty text if no pet spawned
+- fixed pet trainingpoints text text if no pet spawned
+- removed double updatePetLevel call
+- added code for hiding/showing frames for experience points,happiness,loyalty,trainingpoints if pet was summoned or not
+
 0.0.1-9
 - initial release

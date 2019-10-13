@@ -8,6 +8,8 @@ function _HHC.Modules.PetInfo.Functions:setupPetTrainingpoints()
 
     if _HHC.Functions:checkIfPetSummoned() == true then
 
+        _HHC.Modules.PetInfo.Element.Frames.Trainingpoints:Show();
+
         _HHC.Functions:updatePetTrainingPoints();
 
         local unspendPoints = _HHC.Data.CurrentPetTotalPoints - _HHC.Data.CurrentPetPointsSpend;
@@ -38,6 +40,19 @@ function _HHC.Modules.PetInfo.Functions:setupPetTrainingpoints()
 
         _HHC.Modules.PetInfo.Element.Frames.Trainingpoints:SetMinMaxValues(0, _HHC.Data.CurrentPetTotalPoints);
         _HHC.Modules.PetInfo.Element.Frames.Trainingpoints:SetValue(_HHC.Data.CurrentPetPointsSpend);
+
+    else
+
+        if _HHC.Modules.PetInfo.HideBarsWhenNoPetSummoned == false then
+
+            --pet training points
+            _LibWidgets:setText(_HHC.Modules.PetInfo.Element.Frames.Trainingpoints.text, "");
+
+        else
+
+            _HHC.Modules.PetInfo.Element.Frames.Trainingpoints:Hide();
+
+        end
 
     end
 

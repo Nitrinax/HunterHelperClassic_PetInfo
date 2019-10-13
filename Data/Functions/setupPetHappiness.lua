@@ -12,9 +12,11 @@ function _HHC.Modules.PetInfo.Functions:setupPetHappiness()
 
     if _HHC.Functions:checkIfPetSummoned() == true then
 
+        _HHC.Modules.PetInfo.Element.Frames.Happiness:Show();
+
         _HHC.Functions:updatePetHappiness();
 
-        --pet text
+        --pet happiness
         _LibWidgets:setText(_HHC.Modules.PetInfo.Element.Frames.Happiness.text, 
             _LibLocale:GetCatalogStr(_HHC.Modules.PetInfo.Locale.Happiness,
                 "YOUR_PET_IS",
@@ -25,6 +27,19 @@ function _HHC.Modules.PetInfo.Functions:setupPetHappiness()
 
         _HHC.Modules.PetInfo.Element.Frames.Happiness:SetMinMaxValues(0, 3);
         _HHC.Modules.PetInfo.Element.Frames.Happiness:SetValue(_HHC.Data.CurrentPetHappinness);
+
+    else
+
+        if _HHC.Modules.PetInfo.HideBarsWhenNoPetSummoned == false then
+
+            --pet happiness
+            _LibWidgets:setText(_HHC.Modules.PetInfo.Element.Frames.Happiness.text, "");
+
+        else
+
+            _HHC.Modules.PetInfo.Element.Frames.Happiness:Hide();
+
+        end
 
     end
 
