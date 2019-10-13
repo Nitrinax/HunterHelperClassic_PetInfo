@@ -26,6 +26,8 @@
   <!-- misc functions -->
   <Script file="getPetHappinessName.lua"/>
   <Script file="getPetLoyaltyNumber.lua"/>
+  <Script file="checkPetLoyaltyRate.lua"/>
+  <Script file="updatePetLoyaltyRate.lua"/>
 
   <!-- element functions -->
   <Include file="Elements\Elements.xml"/>

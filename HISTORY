@@ -1,3 +1,6 @@
+0.0.1-11
+- added functions checkPetLoyaltyRate and updatePetLoyaltyRate
+
 0.0.1-10
 - fixed TOP_OFFSET" pet Level
 - fixed pet happiness text if no pet spawned
