@@ -1,0 +1,2 @@
+- check for pet is death
+- check for player has leaved taxi
